@@ -2,15 +2,21 @@
 * {
     --dark-color : #19283f;
     --global-color:#33d1cc;
+    --btn-color:blue;
+    --section-color:#eff7fa;
 }
 body {
     font-family: 'Open Sans', sans-serif;
     font-family: 'Roboto', sans-serif;
     font-family: 'Roboto Condensed', sans-serif;
 }
-
+ul {
+    list-style: none;
+}
 .navbar{
     background-color: var(--dark-color);
+    border-bottom: 1px solid rgb(113, 113, 113);
+    box-shadow: 3px -11px 28px 0 white;
 }
 .navbar .navbar-nav .nav-link{
     color: white;
@@ -51,4 +57,74 @@ body {
 .landing {
     background-color: var(--dark-color);
     height: 100vh;
+}
+
+
+/* start feature  */
+.main-title::before{
+    position: absolute;
+    content: "";
+    height: 3px;
+    width: 139px;
+    background-color: var(--global-color);
+    bottom: -19px;
+    left: 50%;
+    transform: translate(-50%);
+}
+.row .card  i {
+    color: var(--global-color);
+    font-size: 75px;
+}
+.row .card h5 {
+    color: rgb(106, 106, 0);
+    font-size: 24px;
+}
+
+.design {
+    background-color: var(--section-color);
+}
+.design ul li {
+    padding: 10px ;
+    transition: 0.5s;
+    margin-right: 1px;
+}
+.design ul li.active,
+.design ul li:hover {
+    color: white;
+    background-color: var(--btn-color);
+}
+.row .col {
+    background-color: white;
+    margin-bottom: 5px;
+}
+.row .col::before {
+    content: "Applecation";
+    position: absolute;
+    top: 0;
+    left: -100%;
+    height: 100%;
+    width: 100%;
+    background-color:#33d1cc70 ;
+    text-align: center;
+    transition: 0.5s;
+    z-index: 100;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: bold;
+        color: white;
+        transition: 0.3s;
+        font-size: 1.5rem;
+}
+.row .col:hover {
+    left: 0%;
+}
+.row .col img{
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+}
+
+.about-us .title {
+    max-width: 500px;
 }
